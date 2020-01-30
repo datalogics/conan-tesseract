@@ -8,7 +8,7 @@ from conans import ConanFile, CMake, tools
 
 class TesseractConan(ConanFile):
     name = "tesseract"
-    version = "3.05.01"
+    version = "3.05.02"
     description = "Tesseract Open Source OCR Engine"
     url = "http://github.com/bincrafters/conan-tesseract"
     author = "Bincrafters <bincrafters@gmail.com>"
@@ -24,7 +24,7 @@ class TesseractConan(ConanFile):
     default_options = {'shared': False, 'fPIC': True, 'with_training': False}
     _source_subfolder = "source_subfolder"
 
-    requires = "leptonica/1.76.0@datalogics/stable"
+    requires = "leptonica/1.76.0@bincrafters/stable"
 
     def source(self):
         tools.get("https://github.com/tesseract-ocr/tesseract/archive/%s.tar.gz" % self.version)
